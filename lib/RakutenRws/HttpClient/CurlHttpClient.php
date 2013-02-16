@@ -30,6 +30,7 @@ class RakutenRws_HttpClient_CurlHttpClient extends RakutenRws_HttpClient
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_HEADER, true);
         curl_setopt($ch, CURLOPT_TIMEOUT, $this->timeout);
+				curl_setopt($ch, CURLOPT_SSLVERSION, 3);
 
         return $ch;
     }
